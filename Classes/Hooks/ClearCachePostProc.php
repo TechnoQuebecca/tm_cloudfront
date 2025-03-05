@@ -327,6 +327,9 @@ class ClearCachePostProc
                 }
             } else {
                 foreach ($paths as $value) {
+                    if (!$distId) {
+                        continue;
+                    }
                     $data = [
                         'pathsegment' => $value,
                         'distributionId' => $distId,
